@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container"> 
+    <div id="header">
+      <div class="app-name">calc</div>
+      <div class="theme">THEME</div>
+      <div class="theme-slider">
+        <div class="label">
+          <label for="theme-swich">1</label>
+          <label for="theme-swich">2</label>
+          <label for="theme-swich">3</label>
+        </div>
+        <input type="range" name="theme-swich" id="theme-swich" value="1" min="1" max="3" step="1">
+      </div>
+    </div>
+
+    <div id="screen">
+      <h1>0</h1>
+    </div>
+    <div id="content" class="row">
+     <button name="7"  class="btn-normal btn-number" >7</button>
+     <button name="8"  class="btn-normal btn-number" >8</button>
+     <button name="9"  class="btn-normal btn-number" btn-number> 9</button>
+     <button name="del"  class="fBtn btn-del">DEL</button>
+     <button name="4"  class="btn-normal btn-number" >4</button>
+     <button name="5"  class="btn-normal btn-number" >5</button>
+     <button name="6"  class="btn-normal btn-number" >6</button>
+     <button name="add"  class="btn-normal btn-operator">+</button>
+     <button name="1"  class="btn-normal btn-number" >1</button>
+     <button name="2"  class="btn-normal btn-number" >2</button>
+     <button name="3"  class="btn-normal btn-number" >3</button>
+     <button name="subtract"  class="btn-normal btn-operator">-</button>
+     <button name="dot"  class="btn-normal btn-dot">.</button>
+     <button name="0"  class="btn-normal btn-number" >0</button>
+     <button name="divide"  class="btn-normal btn-operator">/</button>
+     <button name="multiply"  class="btn-normal btn-operator">x</button>
+     <button name="reset"  class="fBtn btn-reset">RESET </button>
+     <button name="equal"  class="btn-equal">=</button>
+
+    </div>
+
+  </div> 
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">thanhtinh1227</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
