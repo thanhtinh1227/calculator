@@ -26,7 +26,7 @@ delBtn.onclick = () => {
 numberBtns.forEach(btn => {
     btn.onclick = ( e => {
         input.push(e.target.name);
-        setScreen(Number(input.join("")).toLocaleString('en-us'));
+       input.includes(".") ? setScreen(Number(input.join("")).toLocaleString('en-us', {minimumFractionDigits: input.length - input.indexOf(".") - 1})) : setScreen(Number(input.join("")).toLocaleString('en-us'));
     });
 });
 
@@ -62,7 +62,7 @@ dotBtn.onclick = () => {
     if (!input.includes(".")) {
         input.push(".");
     };
-    setScreen(Number(input.join("")).toLocaleString({minimumFractionDigits: (input.length - input.indexOf("."))}));
+    setScreen(input.join(""));
 }
 
 function setScreen (content) {
