@@ -26,7 +26,7 @@ delBtn.onclick = () => {
 numberBtns.forEach(btn => {
     btn.onclick = ( e => {
         input.push(e.target.name);
-       input.includes(".") ? setScreen(Number(input.join("")).toLocaleString('en-us', {minimumFractionDigits: input.length - input.indexOf(".") - 1})) : setScreen(Number(input.join("")).toLocaleString(en-us))
+       input.includes(".") ? setScreen(Number(input.join("")).toLocaleString('en-us', {minimumFractionDigits: input.length - input.indexOf(".") - 1})) : setScreen(Number(input.join("")).toLocaleString('en-us'));
     });
 });
 
@@ -53,7 +53,7 @@ operatorBtns.forEach(btn => {
 equalBtn.onclick = () => {
         num2 = Number(input.join(""));
         result = calculate(num1, num2, operator);
-        setScreen(result);
+        setScreen(result.toLocaleString());
         num1 = result;
         input = [];
 }
@@ -67,7 +67,7 @@ dotBtn.onclick = () => {
 
 function setScreen (content) {
     if(content) {
-        $('#screen h1').innerText = content.toLocaleString();
+        $('#screen h1').innerText = content;
     } else {
         $('#screen h1').innerText = 0;
     }
